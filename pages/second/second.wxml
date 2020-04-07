@@ -1,0 +1,19 @@
+<!--pages/second/second.wxml-->
+<view class="index">
+<view class="text">
+<text >欢迎用户\n  小仙女</text>
+
+</view>
+<view class="img">
+<image  src="/pages/img/img-index.jpg" mode="widthFix"></image>
+</view>
+
+<view class="buttonBg">
+<button bindtap="onUpload" >上传图片</button>
+</view>
+
+<view class="tips">
+<text  class="tips-text">使用方法：\n\n 1. 上传你想编辑的图片\n 2. 左右滑动选择添加你想要的贴图\n 3. 摆放到适当的位置\n 4. 两指放大或缩小贴图\n 5. 点击下方保存图片</text>
+</view>
+
+</view>

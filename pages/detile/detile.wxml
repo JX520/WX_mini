@@ -1,0 +1,31 @@
+<!--pages/detile/detile.wxml-->
+<view class="detile">
+
+	<view class="detile-edit" id="detile-edit">
+		<canvas 
+    style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;" 
+    class="detile-edit-canvas"  
+    canvas-id="detile" 
+    catchtouchstart="onTouchStart"
+    catchtouchmove="onTouchMove"
+    catchtouchend="onTouchEnd"
+    />
+	</view>
+
+	<swiper 
+  class="detile-bottom" 
+  display-multiple-items="{{5}}"
+  >
+		<swiper-item wx:key="cover" wx:for="{{templates}}">
+			<view class="swiper-img {{currentNewScene === index ? 'swiper-img-active' : ' '}}" bindtap="onTapScene" data-index="{{index}}">
+      <image src="{{item.cover}}" ></image>
+      </view>
+		</swiper-item>
+
+		
+	</swiper> 
+
+<view class="detile-btn">
+	<button bindtap="downloadPic">保存图片到手机</button>
+</view>
+</view>
